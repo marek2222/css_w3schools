@@ -1,15 +1,100 @@
 CSS Syntax
 
-A CSS rule-set consists of a selector and a declaration block:
+  CSS Selectors
 
-CSS selector
+    The element Selector
+      p {
+        text-align: center;
+        color: red;
+      }
+      
+      The id Selector
+      #para1 {
+        text-align: center;
+        color: red;
+      }
+      
+      The class Selector
+      .center {
+        text-align: center;
+        color: red;
+      }
+        
+      Grouping Selectors
+      h1, h2, p {
+        text-align: center;
+        color: red;
+      }
 
-The selector points to the HTML element you want to style.
+      CSS Comments
+      /* This is
+      a multi-line
+      comment */
 
-The declaration block contains one or more declarations separated by semicolons.
 
-Each declaration includes a CSS property name and a value, separated by a colon.
 
-A CSS declaration always ends with a semicolon, and declaration blocks are surrounded by curly braces.
+    /**********************************************************/
+    /**********************************************************/
+    CSS How To...
+      Three Ways to Insert CSS
+      There are three ways of inserting a style sheet:
+          - External style sheet
+          - Internal style sheet
+          - Inline style
 
-In the following example all <p> elements will be center-aligned, with a red text color:
+          - External style sheet
+          <head>
+            <link rel="stylesheet" type="text/css" href="mystyle.css">
+          </head> 
+
+      
+          - Internal style sheet
+          <head>
+            <style>
+              body {
+                background-color: linen;
+              }
+              h1 {
+                color: maroon;
+                margin-left: 40px;
+              }
+            </style>
+          </head> 
+
+
+          - Inline style
+          <h1 style="color:blue;margin-left:30px;">This is a heading</h1> 
+
+
+          Multiple Style Sheets
+            If some properties have been defined for the same selector (element)
+            in different style sheets, the value from the last read style sheet
+            will be used. 
+            <head>
+              <link rel="stylesheet" type="text/css" href="mystyle.css">
+              <style>
+                h1 {
+                  color: orange;
+                }
+              </style>
+            </head> 
+
+
+          Cascading Order
+
+            What style will be used when there is more than one style specified 
+            for an HTML element?
+            All the styles in a page will "cascade" into a new "virtual" 
+            style sheet by the following rules, where number one has the highest priority:
+                - Inline style (inside an HTML element)
+                - External and internal style sheets (in the head section)
+                - Browser default
+            So, an inline style has the highest priority, and will override 
+            external and internal styles and browser defaults.
+            
+    /**********************************************************/
+    /**********************************************************/
+            
+
+
+
